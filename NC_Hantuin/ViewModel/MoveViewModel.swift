@@ -8,14 +8,13 @@
 import Foundation
 import SwiftUI
 
-class MovePlayer : ObservableObject{
-    
+class MovePlayer: ObservableObject {
     @Published var offsetY: Int = 300 // posisi awal secara vertikal kuyang
     @Published var offsetX: Int = 200 // posisi awal secara horizontal kuyang
     @Published var offsetXPocong: Int = 300
     @Published var offsetYPocong: Int = 200
-    @Published var offsetYPlayer = 850 //posisi awal vertikal player
-    @Published var offsetXPlayer = 650 //posisi awal horizontal
+    @Published var offsetYPlayer = 850 // posisi awal vertikal player
+    @Published var offsetXPlayer = 650 // posisi awal horizontal
     @Published var offsetXKunti: Int = 300
     @Published var offsetYKunti: Int = 200
     @Published var offsetXGende: Int = 400

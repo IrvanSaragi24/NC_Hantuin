@@ -9,7 +9,6 @@ import Foundation
 
 enum Question {
     case level1, level2, level3
-    
     var questionLevel: String {
         switch self {
         case .level1: return "Find Ghost Call Kuyang"
@@ -18,4 +17,3 @@ enum Question {
         }
     }
 }
-

@@ -9,16 +9,13 @@ import SwiftUI
 
 struct LevelView: View {
     @EnvironmentObject var router: Router
-    
     var requireParam: Int = 0
-    
     var body: some View {
-        
-        ZStack{
+        ZStack {
             Color.gray
                 .ignoresSafeArea()
-            VStack(spacing: 5){
-                HStack{
+            VStack(spacing: 5) {
+                HStack {
                     Spacer()
                     Button {
                         router.popToRoot()
@@ -35,7 +32,7 @@ struct LevelView: View {
                 }
                 Spacer()
                 NavigationLink(value: Destination.thirdPage) {
-                    ZStack{
+                    ZStack {
                         Image("Brush")
                             .resizable()
                             .frame(width: 350, height: 150)
@@ -46,7 +43,7 @@ struct LevelView: View {
                     }
                 }
                 NavigationLink(value: Destination.fourthPage) {
-                    ZStack{
+                    ZStack {
                         Image("Brush")
                             .resizable()
                             .frame(width: 350, height: 150)
@@ -57,7 +54,7 @@ struct LevelView: View {
                     }
                 }
                 NavigationLink(value: Destination.fivePage) {
-                    ZStack{
+                    ZStack {
                         Image("Brush")
                             .resizable()
                             .frame(width: 350, height: 150)

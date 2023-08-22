@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//#-learning-task(explodingAnimation)
 
 /*#-code-walkthrough(0.explodingAnimation)*/
 struct GameOverEffect: View {
@@ -46,13 +45,10 @@ struct GameOverEffect: View {
                     .padding()
             }
             Spacer()
-                .onAppear{
+                .onAppear {
                     isExploded.toggle()
                 }
         }
         .navigationBarTitleDisplayMode(.inline)
-       
     }
 }
-
-
