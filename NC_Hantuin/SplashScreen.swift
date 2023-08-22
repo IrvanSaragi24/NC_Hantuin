@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct SplashScreen: View {
-    @State var splashicon :Bool = false
+    @State var splashicon: Bool = false
     var body: some View {
-        ZStack{
-            if self.splashicon{
+        ZStack {
+            if self.splashicon {
                 HomeView()
-            }
-            else{
+            } else {
                 Image("Komik")
                     .resizable()
                     .frame(width: 300, height: 300)
@@ -24,19 +23,14 @@ struct SplashScreen: View {
                     .background(.gray)
             }
         }
-        .onAppear{
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5){
-                withAnimation{
-                    
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                withAnimation {
                     self.splashicon = true
                 }
-                
             }
-            
         }
-        
     }
-    
 }
 
 struct SplashScreen_Previews: PreviewProvider {

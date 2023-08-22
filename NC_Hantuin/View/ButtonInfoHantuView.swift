@@ -8,25 +8,24 @@
 import SwiftUI
 
 struct ButtonInfoHantuView: View {
-    @Binding var HantuLompat : Bool
-    @Binding var HantuHilang : Bool
-    @Binding var InfoHantuModal : Bool
-    @State var GhostTiltle : String
+    @Binding var hantuLompat: Bool
+    @Binding var hantuHilang: Bool
+    @Binding var infoHantuModal: Bool
+    @State var ghostTiltle: String
     @State var ghostInfo: GhostModel
-    
     var body: some View {
-        ZStack(alignment: .center){
+        ZStack(alignment: .center) {
             Image("\(ghostInfo.name)")
                 .resizable()
                 .frame(width: 120, height: 200)
                 .padding(.bottom, 250)
-                .offset(y: HantuLompat ? -50:0)
-                .opacity(HantuHilang ? 1:0)
+                .offset(y: hantuLompat ? -50:0)
+                .opacity(hantuHilang ? 1:0)
             Image("standingGray")
             Button(action: {
-                self.InfoHantuModal = true
+                self.infoHantuModal = true
             }, label: {
-                ZStack{
+                ZStack {
                     Image("Brush")
                         .resizable()
                         .frame(width: 240, height: 80)
@@ -37,10 +36,9 @@ struct ButtonInfoHantuView: View {
                 }
             })
             .padding(.top, 170)
-            .sheet(isPresented: $InfoHantuModal){
-                InfoHantu (ghostInfo: ghostInfo)
+            .sheet(isPresented: $infoHantuModal) {
+                InfoHantu(ghostInfo: ghostInfo)
             }
-            
         }
     }
 }

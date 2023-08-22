@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E225E3FA2A92760400539D19 /* NC_HantuinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E3F92A92760400539D19 /* NC_HantuinApp.swift */; };
+		E225E3FA2A92760400539D19 /* NCHantuinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E3F92A92760400539D19 /* NCHantuinApp.swift */; };
 		E225E3FC2A92760400539D19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E3FB2A92760400539D19 /* HomeView.swift */; };
 		E225E3FE2A92760500539D19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E225E3FD2A92760500539D19 /* Assets.xcassets */; };
 		E225E4012A92760500539D19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E225E4002A92760500539D19 /* Preview Assets.xcassets */; };
@@ -25,12 +25,11 @@
 		E225E4262A93AFF800539D19 /* ButtonMovePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4252A93AFF800539D19 /* ButtonMovePlayerView.swift */; };
 		E225E4282A93C44200539D19 /* GameLevelTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4272A93C44200539D19 /* GameLevelTwo.swift */; };
 		E225E42A2A93CA3F00539D19 /* GameLevelThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4292A93CA3F00539D19 /* GameLevelThree.swift */; };
-		E225E42C2A93D8CD00539D19 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E42B2A93D8CD00539D19 /* TimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E225E3F62A92760400539D19 /* NC_Hantuin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NC_Hantuin.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E225E3F92A92760400539D19 /* NC_HantuinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC_HantuinApp.swift; sourceTree = "<group>"; };
+		E225E3F92A92760400539D19 /* NCHantuinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NCHantuinApp.swift; sourceTree = "<group>"; };
 		E225E3FB2A92760400539D19 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E225E3FD2A92760500539D19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E225E4002A92760500539D19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -48,7 +47,6 @@
 		E225E4252A93AFF800539D19 /* ButtonMovePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMovePlayerView.swift; sourceTree = "<group>"; };
 		E225E4272A93C44200539D19 /* GameLevelTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelTwo.swift; sourceTree = "<group>"; };
 		E225E4292A93CA3F00539D19 /* GameLevelThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelThree.swift; sourceTree = "<group>"; };
-		E225E42B2A93D8CD00539D19 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +79,7 @@
 		E225E3F82A92760400539D19 /* NC_Hantuin */ = {
 			isa = PBXGroup;
 			children = (
-				E225E3F92A92760400539D19 /* NC_HantuinApp.swift */,
+				E225E3F92A92760400539D19 /* NCHantuinApp.swift */,
 				E225E4142A93031A00539D19 /* SplashScreen.swift */,
 				E225E4202A93620700539D19 /* ViewModel */,
 				E225E40B2A92FFEF00539D19 /* Model */,
@@ -155,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				E225E4212A93622900539D19 /* MoveViewModel.swift */,
-				E225E42B2A93D8CD00539D19 /* TimerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -242,8 +239,7 @@
 				E225E42A2A93CA3F00539D19 /* GameLevelThree.swift in Sources */,
 				E225E4282A93C44200539D19 /* GameLevelTwo.swift in Sources */,
 				E225E41E2A931EAE00539D19 /* ButtonInfoHantuView.swift in Sources */,
-				E225E42C2A93D8CD00539D19 /* TimerViewModel.swift in Sources */,
-				E225E3FA2A92760400539D19 /* NC_HantuinApp.swift in Sources */,
+				E225E3FA2A92760400539D19 /* NCHantuinApp.swift in Sources */,
 				E225E4172A93069800539D19 /* InfoTutorialPlayView.swift in Sources */,
 				E225E4192A930EEC00539D19 /* ModelGhost.swift in Sources */,
 				E225E40F2A93024400539D19 /* GameLevelOne.swift in Sources */,

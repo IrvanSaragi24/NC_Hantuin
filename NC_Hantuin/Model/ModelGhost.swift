@@ -9,7 +9,6 @@ import Foundation
 
 enum GhostModel {
     case kuyang, tuyul, pocong, kuntilanak, genderuwo
-    
     var imageName: String {
         switch self {
         case .kuyang: return "Kuyang"
@@ -19,7 +18,6 @@ enum GhostModel {
         case .genderuwo: return "Genderuwo"
         }
     }
-    
     var name: String {
         switch self {
         case .kuyang: return "Kuyang"
@@ -29,7 +27,6 @@ enum GhostModel {
         case .genderuwo: return "Genderuwo"
         }
     }
-    
     var originPlace: String {
         switch self {
         case .kuyang: return "Kalimantan"

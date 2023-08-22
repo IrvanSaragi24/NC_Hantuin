@@ -10,15 +10,13 @@ import SwiftUI
 struct GameLevelThree: View {
     @State private var timesUp = false
     @State private var isExploded = false
-    @State var BackHome : Bool = false
     @State var timerLimit = 50
     @StateObject private var movePlayer = MovePlayer()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var questionLevel: Question = .level3
     @EnvironmentObject var router: Router
-    
     var body: some View {
-        VStack{
+        VStack {
             HStack {
                 ZStack{
                     RoundedRectangle(cornerRadius: 10)
@@ -30,7 +28,7 @@ struct GameLevelThree: View {
                         .font(.system(size: 25))
                         .fontWeight(.semibold)
                 }
-                ZStack{
+                ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .shadow(color: .gray, radius: 50)
                         .frame(width: 70, height: 50)
@@ -39,11 +37,11 @@ struct GameLevelThree: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.red)
-                        .alert(isPresented: $timesUp){
+                        .alert(isPresented: $timesUp) {
                             Alert(title: Text("Times Up"), message: Text("Try Again"),primaryButton: .default(Text("Home")){
                                 router.popToRoot()
                                 timesUp = true
-                            }, secondaryButton: .default(Text("Yes")){
+                            }, secondaryButton: .default(Text("Yes")) {
                                 timesUp = false
                                 timerLimit = 50
                                 movePlayer.offsetX = 200
@@ -54,15 +52,13 @@ struct GameLevelThree: View {
                         }
                         .padding(.horizontal, 30)
                 }
-                
             }
             Spacer()
-            ZStack{
+            ZStack {
                 
                 if movePlayer.catchGhost == true {
                     GameOverEffect(isExploded: isExploded)
                 }
-                
                 VStack() {
                     Image("Genderuwo")
                         .resizable()
@@ -90,7 +86,7 @@ struct GameLevelThree: View {
                         .opacity(movePlayer.catchGhost == true ? 0 : 1)
                         .position(x: CGFloat(movePlayer.offsetXGende), y: CGFloat(movePlayer.offsetYGende))
                 }
-                .onAppear{
+                .onAppear {
                     if movePlayer.catchGhost == false {
                         movePlayer.RandomMoveGhost()
                     }
@@ -98,14 +94,11 @@ struct GameLevelThree: View {
                 .alert(isPresented: $movePlayer.catchGhost) {
                     Alert(title: Text("End Game!!!"),
                           message: Text("Nice Catch"),
-                          dismissButton: .default(Text("Home"))
-                          {
+                          dismissButton: .default(Text("Home")) {
                         router.popToRoot()
                         timesUp = true
                     })
                 }
-                
-                
                 Image("\(movePlayer.NameImageChar)")
                     .resizable()
                     .scaledToFit()
@@ -115,20 +108,20 @@ struct GameLevelThree: View {
                         self.isExploded = true
                     }
             }
-            HStack{
+            HStack {
                 Spacer()
                 ButtonMovePlayerView(movePlayer: movePlayer)
             }
         }
         .navigationBarBackButtonHidden(true)
         .background(.gray)
-        .onChange(of: movePlayer.offsetYPlayer){ _ in
+        .onChange(of: movePlayer.offsetYPlayer) { _ in
             movePlayer.CatchGhost()
         }
-        .onReceive(timer){ _ in
-            if timerLimit > 0{
+        .onReceive(timer) { _ in
+            if timerLimit > 0 {
                 timerLimit -= 1
-            }else{
+            } else {
                 timesUp = true
             }
         }

@@ -7,26 +7,21 @@
 
 import SwiftUI
 
-
 struct HomeView: View {
-    @State var HantuLompat : Bool = false
-    @State var HantuHilang : Bool = false
-    @State var HantuBesarKecil : CGFloat = 1.0
-    @State var infoKuyang : Bool = false
-    @State var infoTuyul : Bool = false
-    @State var infoPocong : Bool = false
-    @State var infoKuntilanak : Bool = false
-    @State var infoGenderuwo : Bool = false
-    @State var PlayButton : Bool = false
-    @State var infoTutorial :Bool = false
-    
-    
+    @State var hantuLompat: Bool = false
+    @State var hantuHilang: Bool = false
+    @State var infoKuyang: Bool = false
+    @State var infoTuyul: Bool = false
+    @State var infoPocong: Bool = false
+    @State var infoKuntilanak: Bool = false
+    @State var infoGenderuwo: Bool = false
+    @State var infoTutorial: Bool = false
     var body: some View {
-        VStack{
+        VStack {
             Spacer()
             Spacer()
-            VStack{
-                HStack{
+            VStack {
+                HStack {
                     Spacer()
                     Button {
                         self.infoTutorial = true
@@ -36,15 +31,15 @@ struct HomeView: View {
                             .foregroundColor(.black)
                             .padding(.horizontal, 20)
                     }
-                    .sheet(isPresented: $infoTutorial){
+                    .sheet(isPresented: $infoTutorial) {
                         InfoTutorialplayView()
                     }
                 }
                 Spacer()
-                ZStack{
-                    HStack{
+                ZStack {
+                    HStack {
                         NavigationLink(value: Destination.secondPage) {
-                            HStack{
+                            HStack {
                                 Image(systemName: "play.circle.fill")
                                     .font(.system(size: 60))
                                 Text("Play")
@@ -63,55 +58,50 @@ struct HomeView: View {
                     .foregroundColor(.black)
             }
             Spacer()
-            ScrollView(.horizontal){
-                HStack(spacing: -130){
-                    ButtonInfoHantuView(HantuLompat: $HantuLompat,
-                                        HantuHilang: $HantuHilang,
-                                        InfoHantuModal: $infoKuyang,
-                                        GhostTiltle: GhostModel.kuyang.name,
+            ScrollView(.horizontal) {
+                HStack(spacing: -130) {
+                    ButtonInfoHantuView(hantuLompat: $hantuLompat,
+                                        hantuHilang: $hantuHilang,
+                                        infoHantuModal: $infoKuyang,
+                                        ghostTiltle: GhostModel.kuyang.name,
                                         ghostInfo: .kuyang)
-                    ButtonInfoHantuView(HantuLompat: $HantuLompat,
-                                        HantuHilang: $HantuHilang,
-                                        InfoHantuModal: $infoPocong,
-                                        GhostTiltle: GhostModel.pocong.name,
+                    ButtonInfoHantuView(hantuLompat: $hantuLompat,
+                                        hantuHilang: $hantuHilang,
+                                        infoHantuModal: $infoPocong,
+                                        ghostTiltle: GhostModel.pocong.name,
                                         ghostInfo: .pocong)
-                    ButtonInfoHantuView(HantuLompat: $HantuLompat,
-                                        HantuHilang: $HantuHilang,
-                                        InfoHantuModal: $infoTuyul,
-                                        GhostTiltle: GhostModel.tuyul.name,
+                    ButtonInfoHantuView(hantuLompat: $hantuLompat,
+                                        hantuHilang: $hantuHilang,
+                                        infoHantuModal: $infoTuyul,
+                                        ghostTiltle: GhostModel.tuyul.name,
                                         ghostInfo: .tuyul)
-                    ButtonInfoHantuView(HantuLompat: $HantuLompat,
-                                        HantuHilang: $HantuHilang,
-                                        InfoHantuModal: $infoKuntilanak,
-                                        GhostTiltle: GhostModel.kuntilanak.name,
+                    ButtonInfoHantuView(hantuLompat: $hantuLompat,
+                                        hantuHilang: $hantuHilang,
+                                        infoHantuModal: $infoKuntilanak,
+                                        ghostTiltle: GhostModel.kuntilanak.name,
                                         ghostInfo: .kuntilanak)
-                    ButtonInfoHantuView(HantuLompat: $HantuLompat,
-                                        HantuHilang: $HantuHilang,
-                                        InfoHantuModal: $infoGenderuwo,
-                                        GhostTiltle: GhostModel.genderuwo.name,
+                    ButtonInfoHantuView(hantuLompat: $hantuLompat,
+                                        hantuHilang: $hantuHilang,
+                                        infoHantuModal: $infoGenderuwo,
+                                        ghostTiltle: GhostModel.genderuwo.name,
                                         ghostInfo: .genderuwo)
                 }
                 .frame(height: 800)
             }
         }
-        .animation(Animation.easeIn(duration: 2.5).repeatForever(), value: HantuLompat)
-        .onAppear(){
-            self.HantuLompat = true
-            self.HantuHilang = true
+        .animation(Animation.easeIn(duration: 2.5).repeatForever(), value: hantuLompat)
+        .onAppear() {
+            self.hantuLompat = true
+            self.hantuHilang = true
         }
         .background(Image("treeFog")
             .resizable()
             .ignoresSafeArea()
         )
     }
-    
 }
-
-
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
     }
 }
-
-

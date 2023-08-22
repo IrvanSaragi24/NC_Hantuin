@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-
 @main
-struct NC_HantuinApp: App {
+struct NCHantuinApp: App {
     @StateObject var router = Router()
     
     

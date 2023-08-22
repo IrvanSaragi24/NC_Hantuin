@@ -10,19 +10,15 @@ import SwiftUI
 struct GameLevelTwo: View {
     @State private var timesUp = false
     @State private var isExploded = false
-    @State var BackHome : Bool = false
     @State var timerLimit = 35
     @StateObject private var movePlayer = MovePlayer()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var questionLevel: Question = .level2
     @EnvironmentObject var router: Router
-    
-    
     var body: some View {
-        
-        VStack{
+        VStack {
             HStack {
-                ZStack{
+                ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .shadow(color: .gray, radius: 50)
                         .frame(width: 500, height: 40)
@@ -32,7 +28,7 @@ struct GameLevelTwo: View {
                         .font(.system(size: 25))
                         .fontWeight(.semibold)
                 }
-                ZStack{
+                ZStack {
                     RoundedRectangle(cornerRadius: 10)
                         .shadow(color: .gray, radius: 50)
                         .frame(width: 70, height: 50)
@@ -41,7 +37,7 @@ struct GameLevelTwo: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(.red)
-                        .alert(isPresented: $timesUp){
+                        .alert(isPresented: $timesUp) {
                             Alert(title: Text("Times Up"), message: Text("Try Again"),primaryButton: .default(Text("Yes")){
                                 timesUp = false
                                 timerLimit = 35
@@ -49,24 +45,20 @@ struct GameLevelTwo: View {
                                 movePlayer.offsetY = 300
                                 movePlayer.offsetXPlayer = 650
                                 movePlayer.offsetYPlayer = 850
-                                
-                            }, secondaryButton: .default(Text("Home")){
+                            }, secondaryButton: .default(Text("Home")) {
                                 router.popToRoot()
                                 timesUp = true
                             })
                         }
                         .padding(.horizontal, 30)
                 }
-                
             }
             Spacer()
-            ZStack{
-                
+            ZStack {
                 if movePlayer.catchGhost == true {
                     GameOverEffect(isExploded: isExploded)
                 }
-                
-                VStack() {
+                VStack {
                     Image("Pocong")
                         .resizable()
                         .frame(width: 100, height: 125)
@@ -82,11 +74,8 @@ struct GameLevelTwo: View {
                         .frame(width: 100, height: 125)
                         .opacity(movePlayer.catchGhost == true ? 0 : 1)
                         .position(x: CGFloat(movePlayer.offsetXKunti), y: CGFloat(movePlayer.offsetYKunti))
-                       
-                    
-                        
                 }
-                .onAppear{
+                .onAppear {
                     if movePlayer.catchGhost == false {
                         movePlayer.RandomMoveGhost()
                     }
@@ -94,14 +83,11 @@ struct GameLevelTwo: View {
                 .alert(isPresented: $movePlayer.catchGhost) {
                     Alert(title: Text("Nice"),
                           message: Text("you're right"),
-                          dismissButton: .default(Text("Next Level"))
-                          {
+                          dismissButton: .default(Text("Next Level")) {
                         router.path.append(Destination.fivePage)
                         timesUp = true
                     })
                 }
-                
-                
                 Image("\(movePlayer.NameImageChar)")
                     .resizable()
                     .scaledToFit()
@@ -111,33 +97,28 @@ struct GameLevelTwo: View {
                         self.isExploded = true
                     }
             }
-            HStack{
+            HStack {
                 Spacer()
                 ButtonMovePlayerView(movePlayer: movePlayer)
             }
         }
         .navigationBarBackButtonHidden(true)
         .background(.gray)
-        .onChange(of: movePlayer.offsetYPlayer){ _ in
+        .onChange(of: movePlayer.offsetYPlayer) { _ in
             movePlayer.CatchGhost()
         }
-        .onReceive(timer){
-            _ in
-            if timerLimit > 0{
+        .onReceive(timer) { _ in
+            if timerLimit > 0 {
                 timerLimit -= 1
-            }else{
+            } else {
                 timesUp = true
             }
         }
     }
 }
 
-
 //struct GameLevelTwo_Priviews: PreviewProvider {
 //    static var previews: some View {
 //        GameLevelTwo()
 //    }
 //}
-
-
-
