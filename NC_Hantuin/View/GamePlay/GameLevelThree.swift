@@ -11,10 +11,11 @@ struct GameLevelThree: View {
     @State private var timesUp = false
     @State private var isExploded = false
     @State var BackHome : Bool = false
-    @State var timerLimit = 30
+    @State var timerLimit = 50
     @StateObject private var movePlayer = MovePlayer()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var questionLevel: Question = .level3
+    @EnvironmentObject var router: Router
     
     var body: some View {
         VStack{
@@ -40,7 +41,8 @@ struct GameLevelThree: View {
                         .foregroundColor(.red)
                         .alert(isPresented: $timesUp){
                             Alert(title: Text("Times Up"), message: Text("Try Again"),primaryButton: .default(Text("Home")){
-                                print("BackHome")
+                                router.popToRoot()
+                                timesUp = true
                             }, secondaryButton: .default(Text("Yes")){
                                 timesUp = false
                                 timerLimit = 50
@@ -98,7 +100,8 @@ struct GameLevelThree: View {
                           message: Text("Nice Catch"),
                           dismissButton: .default(Text("Home"))
                           {
-                        print("BackHome")
+                        router.popToRoot()
+                        timesUp = true
                     })
                 }
                 
@@ -117,6 +120,7 @@ struct GameLevelThree: View {
                 ButtonMovePlayerView(movePlayer: movePlayer)
             }
         }
+        .navigationBarBackButtonHidden(true)
         .background(.gray)
         .onChange(of: movePlayer.offsetYPlayer){ _ in
             movePlayer.CatchGhost()
@@ -130,8 +134,8 @@ struct GameLevelThree: View {
         }
     }
 }
-struct GameLevelThree_Previews: PreviewProvider {
-    static var previews: some View {
-        GameLevelThree()
-    }
-}
+//struct GameLevelThree_Previews: PreviewProvider {
+//    static var previews: some View {
+//        GameLevelThree()
+//    }
+//}

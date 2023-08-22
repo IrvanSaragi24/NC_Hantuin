@@ -43,10 +43,7 @@ struct HomeView: View {
                 Spacer()
                 ZStack{
                     HStack{
-                        Button(action:{
-                            self.PlayButton = true
-                            
-                        }, label: {
+                        NavigationLink(value: Destination.secondPage) {
                             HStack{
                                 Image(systemName: "play.circle.fill")
                                     .font(.system(size: 60))
@@ -58,7 +55,7 @@ struct HomeView: View {
                             .background(Color.black)
                             .foregroundColor(Color.white)
                             .cornerRadius(20)
-                        })
+                        }
                     }
                 }
                 Text("Before start the game, please read instruction ")

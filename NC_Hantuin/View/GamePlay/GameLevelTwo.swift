@@ -15,6 +15,7 @@ struct GameLevelTwo: View {
     @StateObject private var movePlayer = MovePlayer()
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var questionLevel: Question = .level2
+    @EnvironmentObject var router: Router
     
     
     var body: some View {
@@ -43,15 +44,15 @@ struct GameLevelTwo: View {
                         .alert(isPresented: $timesUp){
                             Alert(title: Text("Times Up"), message: Text("Try Again"),primaryButton: .default(Text("Yes")){
                                 timesUp = false
-                                timerLimit = 30
+                                timerLimit = 35
                                 movePlayer.offsetX = 200
                                 movePlayer.offsetY = 300
                                 movePlayer.offsetXPlayer = 650
                                 movePlayer.offsetYPlayer = 850
                                 
                             }, secondaryButton: .default(Text("Home")){
-//                                BackHome2 = true
-                                print("BackHome")
+                                router.popToRoot()
+                                timesUp = true
                             })
                         }
                         .padding(.horizontal, 30)
@@ -95,7 +96,8 @@ struct GameLevelTwo: View {
                           message: Text("you're right"),
                           dismissButton: .default(Text("Next Level"))
                           {
-                        
+                        router.path.append(Destination.fivePage)
+                        timesUp = true
                     })
                 }
                 
@@ -114,6 +116,7 @@ struct GameLevelTwo: View {
                 ButtonMovePlayerView(movePlayer: movePlayer)
             }
         }
+        .navigationBarBackButtonHidden(true)
         .background(.gray)
         .onChange(of: movePlayer.offsetYPlayer){ _ in
             movePlayer.CatchGhost()
@@ -130,11 +133,11 @@ struct GameLevelTwo: View {
 }
 
 
-struct GameLevelTwo_Priviews: PreviewProvider {
-    static var previews: some View {
-        GameLevelTwo()
-    }
-}
+//struct GameLevelTwo_Priviews: PreviewProvider {
+//    static var previews: some View {
+//        GameLevelTwo()
+//    }
+//}
 
 
 

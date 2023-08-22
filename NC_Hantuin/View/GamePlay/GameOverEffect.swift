@@ -50,7 +50,6 @@ struct GameOverEffect: View {
                     isExploded.toggle()
                 }
         }
-        .navigationTitle("Explosion Animation")
         .navigationBarTitleDisplayMode(.inline)
        
     }

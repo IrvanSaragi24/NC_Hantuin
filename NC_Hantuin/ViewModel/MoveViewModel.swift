@@ -30,7 +30,6 @@ class MovePlayer : ObservableObject{
     @Published var timesUp = false
     @Published var NameImageChar = "boys"
     
-    let ghostImageNames = ["Genderuwo", "Pocong", "Kuntilanak", "Tuyul", "Kuyang"]
     
     func movePlayer(){
         if btnatas {

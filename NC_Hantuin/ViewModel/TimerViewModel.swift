@@ -6,16 +6,3 @@
 //
 
 import Foundation
-
-struct TimerModel {
-    var timerLimit: Int
-    var timesUp: Bool
-    
-    mutating func decrementTimer() {
-        if timerLimit > 0 {
-            timerLimit -= 1
-        } else {
-            timesUp = true
-        }
-    }
-}

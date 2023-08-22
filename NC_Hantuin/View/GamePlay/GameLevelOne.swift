@@ -4,11 +4,12 @@ struct GameLevelOne: View {
     @State private var timesUp = false
     @State private var isExploded = false
     @State var BackHome : Bool = false
-    @State var timerLimit = 20
+    @State var timerLimit = 30
     @StateObject private var movePlayer = MovePlayer()
     private let explodingBits: Int = 75
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var questionLevel: Question = .level1
+    @EnvironmentObject var router: Router
     
     
     var body: some View {
@@ -37,10 +38,11 @@ struct GameLevelOne: View {
                         .foregroundColor(.red)
                         .alert(isPresented: $timesUp){
                             Alert(title: Text("Times Up"), message: Text("Try Again"),primaryButton: .default(Text("Home")){
-                                BackHome = true
-                            }, secondaryButton: .default(Text("Yes")){
+                                router.popToRoot()
                                 timesUp = false
-                                timerLimit = 49
+                            }, secondaryButton: .default(Text("Yes")){
+                                timesUp = true
+                                timerLimit = 30
                                 movePlayer.offsetX = 200
                                 movePlayer.offsetY = 300
                                 movePlayer.offsetXPlayer = 650
@@ -80,7 +82,8 @@ struct GameLevelOne: View {
                                   message: Text("you're right"),
                                   dismissButton: .default(Text("Next Level"))
                                   {
-                                
+                                router.path.append(Destination.fourthPage)
+                                timesUp = true
                             })
                         }
                 }
@@ -96,8 +99,10 @@ struct GameLevelOne: View {
             HStack{
                 Spacer()
                 ButtonMovePlayerView(movePlayer: movePlayer)
+                
             }
         }
+        .navigationBarBackButtonHidden(true)
         .background(.gray)
         .onChange(of: movePlayer.offsetYPlayer){ _ in
             movePlayer.CatchGhost()
@@ -114,10 +119,10 @@ struct GameLevelOne: View {
 }
 
 
-struct GameLevelOne_Priviews: PreviewProvider {
-    static var previews: some View {
-        GameLevelOne()
-    }
-}
+//struct GameLevelOne_Priviews: PreviewProvider {
+//    static var previews: some View {
+//        GameLevelOne()
+//    }
+//}
 
 

@@ -17,13 +17,5 @@ enum Question {
         case .level3: return "Find Ghost Come From Yogyakarta"
         }
     }
-    
-    var timerLimit: Int {
-        switch self {
-        case .level1: return 30
-        case .level2: return 40
-        case .level3: return 50
-        }
-    }
 }
 
