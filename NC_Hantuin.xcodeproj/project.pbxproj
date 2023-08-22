@@ -8,17 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		E225E3FA2A92760400539D19 /* NC_HantuinApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E3F92A92760400539D19 /* NC_HantuinApp.swift */; };
-		E225E3FC2A92760400539D19 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E3FB2A92760400539D19 /* ContentView.swift */; };
+		E225E3FC2A92760400539D19 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E3FB2A92760400539D19 /* HomeView.swift */; };
 		E225E3FE2A92760500539D19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E225E3FD2A92760500539D19 /* Assets.xcassets */; };
 		E225E4012A92760500539D19 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E225E4002A92760500539D19 /* Preview Assets.xcassets */; };
+		E225E4082A92FE5900539D19 /* DataHantu.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4072A92FE5900539D19 /* DataHantu.swift */; };
+		E225E40D2A93008E00539D19 /* GameOverEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E40C2A93008E00539D19 /* GameOverEffect.swift */; };
+		E225E40F2A93024400539D19 /* GameLevelOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E40E2A93024400539D19 /* GameLevelOne.swift */; };
+		E225E4112A93027B00539D19 /* LevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4102A93027B00539D19 /* LevelView.swift */; };
+		E225E4152A93031A00539D19 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4142A93031A00539D19 /* SplashScreen.swift */; };
+		E225E4172A93069800539D19 /* InfoTutorialPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4162A93069800539D19 /* InfoTutorialPlayView.swift */; };
+		E225E4192A930EEC00539D19 /* ModelGhost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4182A930EEC00539D19 /* ModelGhost.swift */; };
+		E225E41B2A931C9200539D19 /* InfoHantuModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E41A2A931C9200539D19 /* InfoHantuModalView.swift */; };
+		E225E41E2A931EAE00539D19 /* ButtonInfoHantuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E41D2A931EAE00539D19 /* ButtonInfoHantuView.swift */; };
+		E225E4222A93622900539D19 /* MoveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4212A93622900539D19 /* MoveViewModel.swift */; };
+		E225E4242A93704200539D19 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4232A93704200539D19 /* QuestionModel.swift */; };
+		E225E4262A93AFF800539D19 /* ButtonMovePlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4252A93AFF800539D19 /* ButtonMovePlayerView.swift */; };
+		E225E4282A93C44200539D19 /* GameLevelTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4272A93C44200539D19 /* GameLevelTwo.swift */; };
+		E225E42A2A93CA3F00539D19 /* GameLevelThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E4292A93CA3F00539D19 /* GameLevelThree.swift */; };
+		E225E42C2A93D8CD00539D19 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E225E42B2A93D8CD00539D19 /* TimerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E225E3F62A92760400539D19 /* NC_Hantuin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NC_Hantuin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E225E3F92A92760400539D19 /* NC_HantuinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NC_HantuinApp.swift; sourceTree = "<group>"; };
-		E225E3FB2A92760400539D19 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E225E3FB2A92760400539D19 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		E225E3FD2A92760500539D19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E225E4002A92760500539D19 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E225E4072A92FE5900539D19 /* DataHantu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHantu.swift; sourceTree = "<group>"; };
+		E225E40C2A93008E00539D19 /* GameOverEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverEffect.swift; sourceTree = "<group>"; };
+		E225E40E2A93024400539D19 /* GameLevelOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelOne.swift; sourceTree = "<group>"; };
+		E225E4102A93027B00539D19 /* LevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelView.swift; sourceTree = "<group>"; };
+		E225E4142A93031A00539D19 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		E225E4162A93069800539D19 /* InfoTutorialPlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTutorialPlayView.swift; sourceTree = "<group>"; };
+		E225E4182A930EEC00539D19 /* ModelGhost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelGhost.swift; sourceTree = "<group>"; };
+		E225E41A2A931C9200539D19 /* InfoHantuModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoHantuModalView.swift; sourceTree = "<group>"; };
+		E225E41D2A931EAE00539D19 /* ButtonInfoHantuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonInfoHantuView.swift; sourceTree = "<group>"; };
+		E225E4212A93622900539D19 /* MoveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveViewModel.swift; sourceTree = "<group>"; };
+		E225E4232A93704200539D19 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		E225E4252A93AFF800539D19 /* ButtonMovePlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonMovePlayerView.swift; sourceTree = "<group>"; };
+		E225E4272A93C44200539D19 /* GameLevelTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelTwo.swift; sourceTree = "<group>"; };
+		E225E4292A93CA3F00539D19 /* GameLevelThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLevelThree.swift; sourceTree = "<group>"; };
+		E225E42B2A93D8CD00539D19 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +82,11 @@
 			isa = PBXGroup;
 			children = (
 				E225E3F92A92760400539D19 /* NC_HantuinApp.swift */,
-				E225E3FB2A92760400539D19 /* ContentView.swift */,
+				E225E4142A93031A00539D19 /* SplashScreen.swift */,
+				E225E4202A93620700539D19 /* ViewModel */,
+				E225E40B2A92FFEF00539D19 /* Model */,
+				E225E40A2A92FFAD00539D19 /* View */,
+				E225E4092A92FF9600539D19 /* Data */,
 				E225E3FD2A92760500539D19 /* Assets.xcassets */,
 				E225E3FF2A92760500539D19 /* Preview Content */,
 			);
@@ -65,6 +99,65 @@
 				E225E4002A92760500539D19 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E225E4092A92FF9600539D19 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E225E4072A92FE5900539D19 /* DataHantu.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E225E40A2A92FFAD00539D19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E225E41C2A931E2800539D19 /* Home */,
+				E225E41F2A9347FD00539D19 /* GamePlay */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E225E40B2A92FFEF00539D19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E225E4182A930EEC00539D19 /* ModelGhost.swift */,
+				E225E4232A93704200539D19 /* QuestionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E225E41C2A931E2800539D19 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				E225E3FB2A92760400539D19 /* HomeView.swift */,
+				E225E4162A93069800539D19 /* InfoTutorialPlayView.swift */,
+				E225E41A2A931C9200539D19 /* InfoHantuModalView.swift */,
+				E225E41D2A931EAE00539D19 /* ButtonInfoHantuView.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		E225E41F2A9347FD00539D19 /* GamePlay */ = {
+			isa = PBXGroup;
+			children = (
+				E225E4102A93027B00539D19 /* LevelView.swift */,
+				E225E40E2A93024400539D19 /* GameLevelOne.swift */,
+				E225E4272A93C44200539D19 /* GameLevelTwo.swift */,
+				E225E4292A93CA3F00539D19 /* GameLevelThree.swift */,
+				E225E4252A93AFF800539D19 /* ButtonMovePlayerView.swift */,
+				E225E40C2A93008E00539D19 /* GameOverEffect.swift */,
+			);
+			path = GamePlay;
+			sourceTree = "<group>";
+		};
+		E225E4202A93620700539D19 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E225E4212A93622900539D19 /* MoveViewModel.swift */,
+				E225E42B2A93D8CD00539D19 /* TimerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +230,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E225E3FC2A92760400539D19 /* ContentView.swift in Sources */,
+				E225E4242A93704200539D19 /* QuestionModel.swift in Sources */,
+				E225E4222A93622900539D19 /* MoveViewModel.swift in Sources */,
+				E225E3FC2A92760400539D19 /* HomeView.swift in Sources */,
+				E225E4112A93027B00539D19 /* LevelView.swift in Sources */,
+				E225E4152A93031A00539D19 /* SplashScreen.swift in Sources */,
+				E225E41B2A931C9200539D19 /* InfoHantuModalView.swift in Sources */,
+				E225E4082A92FE5900539D19 /* DataHantu.swift in Sources */,
+				E225E40D2A93008E00539D19 /* GameOverEffect.swift in Sources */,
+				E225E4262A93AFF800539D19 /* ButtonMovePlayerView.swift in Sources */,
+				E225E42A2A93CA3F00539D19 /* GameLevelThree.swift in Sources */,
+				E225E4282A93C44200539D19 /* GameLevelTwo.swift in Sources */,
+				E225E41E2A931EAE00539D19 /* ButtonInfoHantuView.swift in Sources */,
+				E225E42C2A93D8CD00539D19 /* TimerViewModel.swift in Sources */,
 				E225E3FA2A92760400539D19 /* NC_HantuinApp.swift in Sources */,
+				E225E4172A93069800539D19 /* InfoTutorialPlayView.swift in Sources */,
+				E225E4192A930EEC00539D19 /* ModelGhost.swift in Sources */,
+				E225E40F2A93024400539D19 /* GameLevelOne.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

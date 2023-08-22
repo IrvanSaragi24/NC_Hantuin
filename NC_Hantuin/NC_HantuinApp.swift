@@ -11,7 +11,8 @@ import SwiftUI
 struct NC_HantuinApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            SplashScreen()
+            GameLevelOne()
         }
     }
 }
